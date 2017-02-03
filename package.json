@@ -1,6 +1,6 @@
 {
   "name": "videojs-watermark-with-text",
-  "version": "1.0.5",
+  "version": "1.0.5.1",
   "description": "Adds a watermark image and text to the video player. Based on Brooks Lyrette <brooks@dotsub.com> solution",
   "repository": "https://github.com/BEaStia/videojs-watermark",
   "main": "es5/plugin.js",
