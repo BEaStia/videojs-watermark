@@ -102,7 +102,7 @@ const onPlayerReady = (player, options) => {
   }
 
   if (options.no_fade) {
-    player.on('play', () = > fadeWatermark(options));
+    player.on('play', () => fadeWatermark(options));
   }
 };
 
