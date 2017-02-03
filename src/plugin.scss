@@ -12,7 +12,7 @@
     display: block;
   }
   .vjs-watermark-content {
-    opacity: 0.99;
+    opacity: 0.5;
     position: absolute;
     padding: 5px;
     @include transition(visibility 1.0s, opacity 1.0s);
@@ -35,6 +35,19 @@
   .vjs-watermark-bottom-left {
     left: 0;
     bottom: 30px;
+  }
+  .vjs-watermark-center {
+    left: 50%
+    right: 50%
+    top: 50%
+    bottom: 50%
+  }
+
+  .vjs-big-play-button {
+    left: 50%
+    right: 50%
+    top: 50%
+    bottom: 50%
   }
 
   //fade out when the user is not active and the video is playing.
