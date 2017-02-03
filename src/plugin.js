@@ -9,21 +9,31 @@ const defaults = {
 };
 
 /**
- * Sets up the div, img and optional a tags for the plugin.
+ * Sets up the div, img or text and optional a tags for the plugin.
  *
  * @function setupWatermark
  * @param    {Player} player
  * @param    {Object} [options={}]
  */
 const setupWatermark = (player, options) => {
-  // Add a div and img tag
+  // Add a div and img or text tag
   const videoEl = player.el();
   const div = document.createElement('div');
-  const img = document.createElement('img');
+  if (options.type == 'img') {
+    const img = document.createElement('img');
+  } else {
+    const text = document.createElement('p');
+  }
 
   div.classList.add('vjs-watermark-content');
   div.classList.add(`vjs-watermark-${options.position}`);
-  img.src = options.image;
+  if (options.type == 'img') {
+    img.src = options.image;
+  } else {
+    text.innerText = options.text;
+  }
+
+  const contentItem = options.type == 'img' ? img : text;
 
   // if a url is provided make the image link to that URL.
   if (options.url) {
@@ -36,10 +46,11 @@ const setupWatermark = (player, options) => {
       player.pause();
       window.open(options.url);
     };
-    a.appendChild(img);
+
+    a.appendChild(contentItem);
     div.appendChild(a);
   } else {
-    div.appendChild(img);
+    div.appendChild(contentItem);
   }
   videoEl.appendChild(div);
 };
