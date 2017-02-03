@@ -44,10 +44,9 @@
   }
 
   .vjs-big-play-button {
-    left: 50%;
-    right: 50%;
-    top: 50%;
-    bottom: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }
 
   //fade out when the user is not active and the video is playing.
