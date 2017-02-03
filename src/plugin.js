@@ -5,7 +5,9 @@ const defaults = {
   position: 'top-right',
   fadeTime: 3000,
   url: undefined,
-  image: undefined
+  image: undefined,
+  text: undefined,
+  type: 'img'
 };
 
 /**
@@ -89,7 +91,7 @@ const onPlayerReady = (player, options) => {
   player.addClass('vjs-watermark');
 
   // if there is no image set just exit
-  if (!options.image) {
+  if (!(options.image || options.text)) {
     return;
   }
   setupWatermark(player, options);
@@ -99,7 +101,9 @@ const onPlayerReady = (player, options) => {
     return;
   }
 
-  player.on('play', () => fadeWatermark(options));
+  if (options.no_fade) {
+    player.on('play', () = > fadeWatermark(options));
+  }
 };
 
 /**
