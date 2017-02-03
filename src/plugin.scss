@@ -37,10 +37,10 @@
     bottom: 30px;
   }
   .vjs-watermark-center {
-    left: 50%;
-    right: 50%;
-    top: 50%;
-    bottom: 50%;
+    left: 40% !important;
+    top: 40% !important;
+    width: 20%;
+    height: 20%;
   }
 
   .vjs-big-play-button {
