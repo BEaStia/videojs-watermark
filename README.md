@@ -14,9 +14,13 @@ npm install --save videojs-watermark
 
 ## Configuration
 
-**image: Required** The URL to the image to be used as the watermark.
+**image: ** The URL to the image to be used as the watermark.
 
-**position:** The location to place the watermark (top-left, top-right, bottom-left, bottom-right). Defaults to 'top-right'.
+**text: ** Text to be displayed as the watermark.
+
+**type: ** img or text - to select type of watermark
+
+**position:** The location to place the watermark (top-left, top-right, bottom-left, bottom-right, center). Defaults to 'top-right'.
 
 **fadeTime:** The amount of time in milliseconds for the initial watermark fade. Defaults to 3000. To make watermark permanently visible, use `null`.
 

@@ -19,21 +19,24 @@ const setupWatermark = (player, options) => {
   // Add a div and img or text tag
   const videoEl = player.el();
   const div = document.createElement('div');
-  if (options.type == 'img') {
-    const img = document.createElement('img');
+  let img;
+  let text;
+
+  if (options.type === 'img') {
+    img = document.createElement('img');
   } else {
-    const text = document.createElement('p');
+    text = document.createElement('p');
   }
 
   div.classList.add('vjs-watermark-content');
   div.classList.add(`vjs-watermark-${options.position}`);
-  if (options.type == 'img') {
+  if (options.type === 'img') {
     img.src = options.image;
   } else {
     text.innerText = options.text;
   }
 
-  const contentItem = options.type == 'img' ? img : text;
+  const contentItem = options.type === 'img' ? img : text;
 
   // if a url is provided make the image link to that URL.
   if (options.url) {

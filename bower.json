@@ -1,6 +1,6 @@
 {
-  "author": "Brooks Lyrette <brooks@dotsub.com>",
-  "homepage": "https://github.com/dotsub/videojs-watermark",
+  "author": "Brooks Lyrette <brooks@dotsub.com> and Igor Pavlov <gophan1992@gmail.com>",
+  "homepage": "https://github.com/BEaStia/videojs-watermark",
   "keywords": [
     "videojs",
     "videojs-plugin",
@@ -12,7 +12,7 @@
     "src/plugin.scss"
   ],
   "moduleType": "es6",
-  "name": "videojs-watermark",
-  "version": "1.0.0"
+  "name": "videojs-watermark-with-text",
+  "version": "1.0.1"
 }
 
